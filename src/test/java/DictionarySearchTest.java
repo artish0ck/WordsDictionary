@@ -56,7 +56,7 @@ public class DictionarySearchTest {
         List<String> wordsFromDictionary = Arrays.asList("cat", "act", "bat", "tab");
 
         List<String> expected = Arrays.asList("cat", "act");
-        List<String> actual = DictionarySearch.wordsFound(userSubstrings, wordsFromDictionary);
+        List<String> actual = DictionarySearch.getWordsFound(userSubstrings, wordsFromDictionary);
 
         assertEquals(expected, actual);
     }

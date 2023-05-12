@@ -22,7 +22,7 @@ public class DictionarySearch {
         System.out.println("Words from dictionary: " + wordsFromDictionary);
 
         // 3. check possible substrings against dictionary
-        List<String> wordsFound = wordsFound(userSubstrings, wordsFromDictionary);
+        List<String> wordsFound = getWordsFound(userSubstrings, wordsFromDictionary);
 
 
         // 4. resulting output
@@ -51,7 +51,7 @@ public class DictionarySearch {
     }
 
 
-    public static List<String> wordsFound(List<String> userSubstrings, List<String> wordsFromDictionary) {
+    public static List<String> getWordsFound(List<String> userSubstrings, List<String> wordsFromDictionary) {
         List<String> wordsFound = new ArrayList<>();
         for (String userSubstring : userSubstrings) {
             if (wordsFromDictionary.contains(userSubstring)) {
@@ -65,6 +65,4 @@ public class DictionarySearch {
         return wordsFound
                 .stream().distinct().collect(Collectors.toList());
     }
-
-
 }
